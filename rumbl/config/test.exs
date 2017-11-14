@@ -17,3 +17,7 @@ config :rumbl, Rumbl.Repo,
   database: "rumbl_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+# Turn off expensive password hashing in tests
+# config :bcrypt_elixir, :log_rounds, 4
+config :pbkdf2_elixir, :rounds, 1
