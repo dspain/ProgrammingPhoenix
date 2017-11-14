@@ -24,7 +24,7 @@ defmodule Rumbl.VideoControllerTest do
 
   test "lists all user's videos on index", %{conn: conn, user: user} do
     user_video  = insert_video(user, title: "funny cats")
-    other_video = insert_vide(insert_user(username: "other"), title: "another video")
+    other_video = insert_video(insert_user(username: "other"), title: "another video")
 
     conn = get conn, video_path(conn, :index)
     assert html_response(conn, 200) =~ ~r/Listing videos/
