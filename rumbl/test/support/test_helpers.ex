@@ -4,12 +4,12 @@ defmodule Rumbl.TestHelpers do
   def insert_user(attrs \\ %{}) do
     changes = Dict.merge(%{
       name: "Some User",
-      username: "user#{Base.encode16(:crypto.rand_bytes(8))}",
+      username: "user#{Base.encode16(:crypto.strong_rand_bytes(8))}",
       password: "supersecret",
     }, attrs)
 
     %Rumbl.User{}
-    |> Rumbl.user.registration_changeset(changes)
+    |> Rumbl.User.registration_changeset(changes)
     |> Repo.insert!()
   end
 
