@@ -3,7 +3,6 @@ defmodule Rumbl.UserTest do
   alias Rumbl.User
 
   @valid_attrs %{name: "A User", username: "eva", password: "secret"}
-  @invalid_attrs %{}
 
   test "changeset with valid attributes" do
     changeset = User.changeset(%User{}, @valid_attrs)
