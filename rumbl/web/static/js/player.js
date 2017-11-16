@@ -6,7 +6,7 @@ let Player = {
       this.onIframeReady(domId, playerId, onReady)
     }
     let youtubeScriptTag = document.createElement("script")
-    youtubeScripttag.src = "//www.youtube.com/iframe_api"
+    youtubeScriptTag.src = "//www.youtube.com/iframe_api"
     document.head.appendChild(youtubeScriptTag)
   },
 
