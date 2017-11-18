@@ -7,7 +7,7 @@ defmodule Rumbl.VideoChannel do
     video = Repo.get!(Rumbl.Video, video_id)
 
     annotations = Repo.all(
-      from a in assoc(video, :associations),
+      from a in assoc(video, :annotations),
         order_by: [asc: a.at, asc: a.id],
         limit: 200,
         preload: [:user]
