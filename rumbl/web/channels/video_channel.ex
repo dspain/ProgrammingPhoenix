@@ -14,7 +14,7 @@ defmodule Rumbl.VideoChannel do
     )
 
     resp = %{annotations: Phoenix.View.render_many(annotations, AnnotationView, "annotation.json")}
-    {:ok, assign(socket, :video_id, video_id)}
+    {:ok, resp, assign(socket, :video_id, video_id)}
   end
 
   def handle_in(event, params, socket) do
