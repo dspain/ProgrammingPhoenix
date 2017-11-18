@@ -1,6 +1,6 @@
 import Player from "./player"
 
-let video = {
+let Video = {
   init(socket, element){ if(!element){ return }
     let playerId = element.getAttribute("data-player-id")
     let videoId = element.getAttribute("data-id")
