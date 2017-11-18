@@ -1,7 +1,7 @@
 defmodule Rumbl.UserSocket do
   use Phoenix.Socket
 
-  @max_age = 2*7*24*60*60
+  @max_age 2*7*24*60*60
 
   ## Channels
   channel "videos:*", Rumbl.VideoChannel
