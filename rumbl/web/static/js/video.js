@@ -30,7 +30,7 @@ let Video = {
     vidChannel.join()
       .receive("ok", ({annotations}) => {
         annotations.forEach( ann => this.renderAnnotation(msgContainer, ann) )
-      }
+      })
       .receive("error", reason => console.log("join failed", reason) )
   },
 
