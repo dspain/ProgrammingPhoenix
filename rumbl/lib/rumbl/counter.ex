@@ -10,7 +10,7 @@ defmodule Rumbl.Counter do
   end
 
   def start_link(initial_val) do
-    GenServer.start_link(__MODULE__), initial_val)
+    GenServer.start_link(__MODULE__, initial_val)
   end
 
   def init(initial_val) do
