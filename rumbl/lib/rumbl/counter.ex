@@ -6,7 +6,7 @@ defmodule Rumbl.Counter do
   def dec(pid), do: GenServer.cast(pid, :dec)
 
   def val(pid) do
-    Genserver.call(pid, :val)
+    GenServer.call(pid, :val)
   end
 
   def start_link(initial_val) do
