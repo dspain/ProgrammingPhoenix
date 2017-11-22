@@ -43,7 +43,7 @@ defmodule Rumbl.InfoSys do
         await_result(tail, acc, timeout)
     end
   end
-  def await_result([], acc, _) do
+  defp await_result([], acc, _) do
     acc
   end
 end
