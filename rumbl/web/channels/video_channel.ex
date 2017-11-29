@@ -42,7 +42,7 @@ defmodule Rumbl.VideoChannel do
 
   defp broadcast_annotation(socket, annotation) do
     annotation = Repo.preload(annotation, :user)
-    rendered_ann = Phonenix.View.render(AnnotationView, "annotation.json", %{
+    rendered_ann = Phoenix.View.render(AnnotationView, "annotation.json", %{
       annotation: annotation
     })
     broadcast! socket, "new_annotation", rendered_ann
