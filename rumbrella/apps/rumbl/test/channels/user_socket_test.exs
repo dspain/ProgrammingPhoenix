@@ -1,5 +1,5 @@
 defmodule Rumbl.Channels.UserSocketTest do
-  use Rumbl.ChannnelCase, async: true
+  use Rumbl.ChannelCase, async: true
   alias Rumbl.UserSocket
 
   test "socket authentication with valid token" do
